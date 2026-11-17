@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shop | D&amp;N</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500&family=Hanken+Grotesk:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="shop">
+<div id="top"></div>
+
+<main>
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">The range</div>
+      <h1 id="shopTitle">All pieces</h1>
+      <p class="lead">Twelve pieces for men, in six colors. Filter by what you need, then open a piece for sizes and fabric.</p>
+    </div>
+
+    <div class="filters" id="filters">
+      <div class="frow">
+        <div class="fgroup"><span class="flabel">Category</span>
+          <div class="chips">
+            <button class="chip" type="button" data-cat="all" aria-pressed="true">All</button>
+            <button class="chip" type="button" data-cat="tops" aria-pressed="false">Tops</button>
+            <button class="chip" type="button" data-cat="bottoms" aria-pressed="false">Bottoms</button>
+            <button class="chip" type="button" data-cat="outerwear" aria-pressed="false">Outerwear</button>
+            <button class="chip" type="button" data-cat="extras" aria-pressed="false">Extras</button>
+          </div>
+        </div>
+        <div class="fgroup"><span class="flabel">Collection</span>
+          <div class="chips">
+            <button class="chip" type="button" data-col="essentials" aria-pressed="false">Essentials</button>
+            <button class="chip" type="button" data-col="training" aria-pressed="false">Training</button>
+            <button class="chip" type="button" data-col="recovery" aria-pressed="false">Recovery</button>
+          </div>
+        </div>
+      </div>
+      <div class="frow">
+        <div class="fgroup"><span class="flabel">Color</span>
+          <div class="dots">
+            <button class="dot-f" type="button" data-color="forest" style="--c:#1F4A38" aria-label="Forest" aria-pressed="false"></button>
+            <button class="dot-f" type="button" data-color="moss" style="--c:#5F7A4E" aria-label="Moss" aria-pressed="false"></button>
+            <button class="dot-f" type="button" data-color="sage" style="--c:#A9BFAA" aria-label="Sage" aria-pressed="false"></button>
+            <button class="dot-f" type="button" data-color="sand" style="--c:#D8C6A3" aria-label="Sand" aria-pressed="false"></button>
+            <button class="dot-f" type="button" data-color="bone" style="--c:#E9E4D8" aria-label="Bone" aria-pressed="false"></button>
+            <button class="dot-f" type="button" data-color="ink" style="--c:#1D2420" aria-label="Ink" aria-pressed="false"></button>
+          </div>
+        </div>
+        <div class="fgroup">
+          <label class="flabel" for="sizeSel" style="min-width:0">Size</label>
+          <select class="sel" id="sizeSel">
+            <option value="all">Any size</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option>
+          </select>
+          <label class="flabel" for="sortSel" style="min-width:0">Sort</label>
+          <select class="sel" id="sortSel">
+            <option value="featured">Featured</option><option value="low">Price, low to high</option><option value="high">Price, high to low</option><option value="name">Name</option>
+          </select>
+          <span class="res" id="res" role="status"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+  <div style="height:clamp(3rem,8vw,6rem)"></div>
+</main>
+
+<div id="foot"></div>
+<script src="app.js" defer></script>
+</body>
+</html>
